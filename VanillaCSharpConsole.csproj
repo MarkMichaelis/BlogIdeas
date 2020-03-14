@@ -2,6 +2,7 @@
 <PropertyGroup>
   <RuntimeIdentifier>win10-x64</RuntimeIdentifier>
   <PublishSingleFile>true</PublishSingleFile>
+  <LangVersion>8.0</LangVersion>
   
 </PropertyGroup>
   <PropertyGroup>

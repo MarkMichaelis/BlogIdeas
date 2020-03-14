@@ -1,4 +1,5 @@
-﻿using System;
+﻿#nullable enable
+using System;
 
 namespace VanillaCSharpConsole
 {
@@ -6,7 +7,23 @@ namespace VanillaCSharpConsole
     {
         static void Main(string[]? args)
         {
-            Console.WriteLine("Hello World!");
+            DoSomething();
+            //System.GC.Collect();
+        }
+
+        static void DoSomething()
+        {
+            Thing thing = new Thing();
         }
     }
+
+    class Thing
+    {
+        ~Thing()
+        {
+            Console.WriteLine("Executing finalizer...");
+            throw new Exception();
+        }
+    }
+
 }
